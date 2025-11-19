@@ -1,0 +1,77 @@
+/* Sección de Presentación (Sobre Nosotros) */
+body {
+    margin: 100px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+.quiensomos p {
+    flex-grow: 1;
+    text-align: justify;
+}
+.contenedor_quienes {
+    display: block;
+    gap: 30px;
+    align-items: flex-start;
+    /* Alinea los elementos al inicio */
+}
+.imagen-quienes {
+    
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para resaltar */
+}
+
+/* Contenedor de tarjetas */
+.tarjetas_container {
+    display: flex;
+    gap: 30px;
+    /* Espacio entre tarjetas */
+    justify-content: center;
+    /* Centra horizontalmente */
+    flex-wrap: wrap;
+    /* Hace que bajen en pantallas pequeñas */
+    margin: 50px 0;
+}
+.tarjeta {
+    background-color: #a1c349;
+    /* Fondo oscuro gamer */
+    color: #000000;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    flex: 1 1 300px;
+    /* Crece y se encoge con mínimo 300px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px;
+}
+.tarjeta:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+.tarjeta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color:#000000;
+}
+
+.titulos-arcade {
+    max-width: 500px; /* ancho máximo para que no se expanda toda la ventana */
+    white-space: nowrap; /* evita que el texto se divida en varias líneas */
+    overflow: hidden; /* oculta el texto que aún no aparece */
+    border-right: 2px solid #a1c349; /* cursor tipo arcade */
+       /* Animaciones */
+    animation: typing 4s steps(50, end) forwards, blink 0.7s step-end infinite;
+}
+
+/* Animación de escritura letra por letra */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Parpadeo del cursor */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
